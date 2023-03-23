@@ -2,7 +2,7 @@ const express=require("express")
 const bodyParser=require("body-parser")
 const app=express()
 
-require("./config/config")
+require("./model/index")
 require("./model/relationShips")
 const userRoute=require("./routes/userRoutes")
 const productRoute=require("./routes/productRoutes")

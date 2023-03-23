@@ -1,4 +1,4 @@
-const {sequelize}= require("../config/config")
+const { sequelize } = require("./index");
 const User=require("./user.model")
 const Products=require("./product.model")
 const Category=require("./categoryModel")

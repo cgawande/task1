@@ -16,7 +16,7 @@ const checkUserAuth = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       success: "failure",
-      message: "Error occure" + err.message,
+      message: "Error occured " + err.message,
     });
   }
 };

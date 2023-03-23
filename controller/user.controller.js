@@ -8,7 +8,6 @@ const userSignUp = async (req, res) => {
     const isUserExist = await UserModel.findOne({
       where: { email: req.body.email },
     });
-    console.log(isUserExist);
     if (isUserExist) {
       res.status(409).json({
         message: false,
@@ -43,7 +42,6 @@ const userLogin = async (req, res) => {
         message: "User with this email is not found",
       });
     } else {
-      console.log(req.body.password,isUserExist.password)
       const isMatch = await bcrypt.compare( req.body.password,isUserExist.password);
       if (isMatch) {
         const token = jwt.sign(
